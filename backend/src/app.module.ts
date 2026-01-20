@@ -18,7 +18,7 @@ import { AiModule } from './ai/ai.module';
       useFactory: (configService: ConfigService) => ({
         type: 'postgres',
         host: configService.get('DATABASE_HOST', 'localhost'),
-        port: configService.get<number>('DATABASE_PORT', 5432),
+        port: (console.log('DBPORT', configService.get<number>('DATABASE_PORT', 5432)), configService.get<number>('DATABASE_PORT', 5432)),
         username: configService.get('DATABASE_USER', 'gymtracker'),
         password: configService.get('DATABASE_PASSWORD', 'gymtracker123'),
         database: configService.get('DATABASE_NAME', 'gymtracker'),
