@@ -49,12 +49,6 @@ export default defineConfig({
   },
   server: {
     port: 5173,
-    proxy: {
-      '/api': {
-        target: 'https://gymtracker-api.schlutersolucoes.com.br',
-        changeOrigin: true,
-      },
-    },
   },
 });
 
