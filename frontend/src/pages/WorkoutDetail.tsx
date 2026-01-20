@@ -17,7 +17,7 @@ export default function WorkoutDetail() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { toast, showToast, hideToast } = useToast();
-  const [workout, setWorkout] = useState<Workout | null>(null);
+  const [, setWorkout] = useState<Workout | null>(null);
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [exercises, setExercises] = useState<
