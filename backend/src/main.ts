@@ -3,9 +3,9 @@ import { ValidationPipe } from '@nestjs/common';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
-
   console.log('Env check', process.env.PORT);
+
+  const app = await NestFactory.create(AppModule);
   
   app.enableCors({
     origin: ['http://localhost:5173', 'https://gymtracker-api.schlutersolucoes.com.br', 'https://gymtracker.schlutersolucoes.com.br'],
